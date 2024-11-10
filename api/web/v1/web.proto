@@ -12,7 +12,7 @@ option java_outer_classname = "WebProtoV1";
 service WebServer {
   rpc GetSettings (SettingRequest) returns (SettingReply) {
     option (google.api.http) = {
-      get: "/web/{accountId}"
+      get: "/web/{account_id}"
     };
   }
 }

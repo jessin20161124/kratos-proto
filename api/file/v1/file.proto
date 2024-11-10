@@ -14,7 +14,7 @@ service FileServer {
   // Sends a greeting
   rpc GetFile (FileRequest) returns (FileReply) {
     option (google.api.http) = {
-      get: "/file/{fileId}"
+      get: "/file/{file_id}"
     };
   }
 }
