@@ -1,4 +1,4 @@
-module kratos-proto
+module github.com/jessin20161124/kratos-proto
 
 go 1.21
 
