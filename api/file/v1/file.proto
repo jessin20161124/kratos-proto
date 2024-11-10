@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package file.v1;
+
+import "google/api/annotations.proto";
+// protoc --go_out=. --proto_path=third_party --proto_path=api api/file/v1/file.proto api/web/v1/web.proto api/error/v1/error_reason.proto
+option go_package = "api/file/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.kratos.api.file.v1";
+option java_outer_classname = "FileProtoV1";
+
+// The greeting service definition.
+service FileServer {
+  // Sends a greeting
+  rpc GetFile (FileRequest) returns (FileReply) {
+    option (google.api.http) = {
+      get: "/file/{name}"
+    };
+  }
+}
+
+// The request message containing the user's name.
+message FileRequest {
+  string file_id = 1;
+}
+
+// The response message containing the greetings
+message FileReply {
+  string message = 1;
+}
