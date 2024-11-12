@@ -19,7 +19,7 @@ service WebServer {
 
 // The request message containing the user's name.
 message SettingRequest {
-  string account_id = 1;
+  string account_id = 1  [json_name = "account_id"];;
 }
 
 // The response message containing the greetings
