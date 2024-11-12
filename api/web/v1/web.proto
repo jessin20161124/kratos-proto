@@ -19,6 +19,7 @@ service WebServer {
 
 // The request message containing the user's name.
 message SettingRequest {
+  // must set json name corresponding to path variable name
   string account_id = 1  [json_name = "account_id"];;
 }
 
