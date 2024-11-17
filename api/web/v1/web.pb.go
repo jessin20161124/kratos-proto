@@ -27,6 +27,7 @@ type SettingRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// must set json name corresponding to path variable name
 	AccountId string `protobuf:"bytes,1,opt,name=account_id,proto3" json:"account_id,omitempty"`
 }
 
