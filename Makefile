@@ -36,6 +36,6 @@ config:
 .PHONY: api
 # generate api proto
 api:
-	protoc --go_out=. --proto_path=third_party --proto_path=api api/file/v1/file.proto api/web/v1/web.proto api/error/v1/error_reason.proto
+	protoc --go_out=. --proto_path=third_party --proto_path=api api/file/v1/file.proto api/web/v1/web.proto api/healthcheck/v1/healthcheck.proto api/error/v1/error_reason.proto
 	protoc --go-http_out=. --proto_path=third_party --proto_path=api api/file/v1/file.proto api/web/v1/web.proto api/healthcheck/v1/healthcheck.proto api/error/v1/error_reason.proto
 	protoc --go-grpc_out=. --proto_path=third_party --proto_path=api api/file/v1/file.proto api/web/v1/web.proto api/healthcheck/v1/healthcheck.proto api/error/v1/error_reason.proto
