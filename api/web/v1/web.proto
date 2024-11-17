@@ -17,13 +17,13 @@ service WebServer {
   }
 }
 
-// The request message containing the user's name.
 message SettingRequest {
   // must set json name corresponding to path variable name
-  string account_id = 1  [json_name = "account_id"];;
+  string account_id = 1  [json_name = "account_id"];
+  repeated string featureIds = 2;
 }
 
-// The response message containing the greetings
 message SettingReply {
-  string message = 1;
+  map<string, string> map = 1 [
+    json_name = "map"];
 }
